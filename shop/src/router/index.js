@@ -1,34 +1,18 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomePage from "@/pages/HomePage.vue";
-import ShopPage from "@/pages/ShopPage.vue";
+
+import routes from "./routes";
+import NotFoundPage from "@/pages/NotFoundPage.vue";
 import store from "@/store/index";
-import CreateProductPage from "@/pages/CreateProductPage.vue";
 
 const router = createRouter({
   // Optionen
   history: createWebHistory(),
   routes: [
+    ...routes,
     {
-      path: "/",
-      component: HomePage,
-      beforeEnter: (to, from, next) => {
-        if (store.getters.isAuthenticated) {
-          next("/shop");
-        } else {
-          next();
-        }
-      },
-    },
-    {
-      path: "/shop",
-      component: ShopPage,
-      meta: {
-        requiresAuth: true,
-      },
-    },
-    {
-      path: "/shop/create/product",
-      component: CreateProductPage,
+      path: "/:pathMatch(.*)*",
+      component: NotFoundPage,
+      redirect: "/",
     },
   ],
 });

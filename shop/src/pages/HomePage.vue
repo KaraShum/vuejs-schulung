@@ -29,9 +29,9 @@
 </template>
 
 <script>
-import TheTwoColumnsLayout from "@/layouts/TheTwoColumnsLayout.vue";
-import RegisterPage from "@/components/auth/RegisterPage.vue";
-import LoginPage from "@/components/auth/LoginPage.vue";
+import TheTwoColumnsLayout from "@layouts/TheTwoColumnsLayout.vue";
+import RegisterPage from "@components/auth/RegisterPage.vue";
+import LoginPage from "@components/auth/LoginPage.vue";
 export default {
   name: "HomePage",
   components: {
