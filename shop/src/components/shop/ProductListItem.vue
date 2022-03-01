@@ -3,10 +3,10 @@
     <img src="https://picsum.photos/200" />
     <div class="card-body">
       <h5 class="card-title">{{ product.title }}</h5>
-      <p class="card-text">{{ shortenedDescription }}</p>
+      <p class="card-text">{{ shortendDescription }}</p>
       <div class="text-center mt-3">
         <div class="lead">
-          <strong class="text-vue">{{ product.price }}</strong>
+          <strong class="text-vue">{{ product.price }} €</strong>
         </div>
       </div>
       <!--       <router-link
@@ -28,9 +28,9 @@ export default {
     product: Object,
   },
   computed: {
-    shortenedDescription() {
+    shortendDescription() {
       if (this.product.description.length < 80) {
-        return this.product.description.length;
+        return this.product.description;
       }
       return this.product.description.slice(0, 80) + "...";
     },
@@ -38,4 +38,5 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>

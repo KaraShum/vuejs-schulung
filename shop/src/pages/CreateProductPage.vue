@@ -33,10 +33,10 @@
                         </button>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class="col-12">
-                        {{ product.description }}
-                      </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      {{ product.description }}
                     </div>
                   </div>
                 </div>
@@ -50,7 +50,7 @@
 </template>
 
 <script>
-import TheShopLayout from "@/layouts/TheShopLayout.vue";
+import TheShopLayout from "@/layouts/TheShopLayout";
 export default {
   name: "CreateProductPage",
   components: {
@@ -60,11 +60,10 @@ export default {
     return {
       product: {
         title: "Produkt " + Math.ceil(Math.random() * 10000),
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Expedita corrupti sint debitis dignissimos laudantium
-                      nisi commodi voluptas distinctio odio? Obcaecati
-                      exercitationem commodi natus quod eveniet totam quam est
-                      cum tempore.`,
+        description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Natus hic sapiente quo veritatis assumenda in doloribus
+                      doloremque molestiae minus cum corrupti dolorem minima,
+                      sed iste repellendus unde voluptatem, nihil facilis.`,
         price: Math.ceil(Math.random() * 100),
       },
     };
@@ -77,4 +76,5 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>

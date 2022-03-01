@@ -7,7 +7,8 @@
 </template>
 
 <script>
-import ProductListItem from "@/components/shop/ProductListItem.vue";
+import ProductListItem from "@/components/shop/ProductListItem";
+
 export default {
   name: "ShopPage",
   components: {
@@ -21,4 +22,5 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>

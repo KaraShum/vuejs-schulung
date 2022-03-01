@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- Navbar -->
     <TheNavbar />
     <main>
       <div class="container">
@@ -16,6 +15,7 @@
 
 <script>
 import TheNavbar from "@/components/TheNavbar";
+
 export default {
   name: "TheShopLayout",
   components: {
@@ -24,4 +24,5 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>

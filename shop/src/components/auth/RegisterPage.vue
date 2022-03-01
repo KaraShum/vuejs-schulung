@@ -105,7 +105,7 @@ export default {
       password: yup
         .string()
         .required("Ein Passwort wird benötigt.")
-        .min(6, "Das Passwort muss mindestens 6 Zeichen lang sein"),
+        .min(6, "Das Passwort muss mindestens sechs Zeichen lang sein."),
       confirmPassword: yup
         .string()
         .oneOf([yup.ref("password")], "Passwörter stimmen nicht überein."),
@@ -131,6 +131,7 @@ export default {
     submitData(values) {
       this.isLoading = true;
       this.error = "";
+      // console.log(values);
       this.$store
         .dispatch("signup", {
           email: values.email,
@@ -138,7 +139,8 @@ export default {
         })
         .then(() => {
           this.isLoading = false;
-          this.changeComponent("loginPage");
+          // console.log(this.$store.state);
+          this.changeComponent("login");
         })
         .catch((error) => {
           this.error = error.message;
@@ -152,4 +154,5 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>

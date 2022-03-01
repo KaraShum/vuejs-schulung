@@ -3,11 +3,13 @@
     <div class="row" :class="rowClasses">
       <div :class="leftColumnClasses">
         <slot name="leftCol">
-          
+          <h1>Linke Spalte</h1>
         </slot>
       </div>
       <div :class="rightColumnClasses">
-        <slot name="rightCol"></slot>
+        <slot name="rightCol">
+          <h1>Rechte Spalte</h1>
+        </slot>
       </div>
     </div>
   </div>
@@ -47,4 +49,5 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>

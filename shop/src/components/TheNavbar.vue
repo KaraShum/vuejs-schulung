@@ -32,7 +32,7 @@ export default {
     },
   }, */
   computed: {
-    //...mapGetters(["cartTotal"]),
+    // ...mapGetters(["cartTotal"]),
     ...mapGetters({ cartSum: "cartTotal" }),
   },
   methods: {
@@ -48,4 +48,5 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>

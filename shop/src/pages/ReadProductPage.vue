@@ -27,28 +27,32 @@
                       <div class="d-grid">
                         <button
                           class="btn bg-vue2"
-                          @click="addProduct({ productId: productId })"
+                          @click="addProduct({ productId: product.id })"
                         >
                           {{ product.price }} €
                         </button>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class="col-12">
-                        {{ product.description }}
-                      </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      {{ product.description }}
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="card mt-4">
-              <div class="card-body">
-                <h4>Das könnte Sie auch interessieren...</h4>
-                <router-link
-                  :to="{ name: 'ReadProduct', params: { id: '(ID?)' } }"
-                ></router-link>
-              </div>
+          </div>
+          <div class="card mt-4">
+            <div class="card-body">
+              <h4>Das könnte Sie auch interessieren...</h4>
+              <router-link
+                :to="{
+                  name: 'ReadProduct',
+                  params: { id: '-MgEuw10sUAOonJ0gazr' },
+                }"
+                >-MgEuw10sUAOonJ0gazr</router-link
+              >
             </div>
           </div>
         </div>
@@ -59,7 +63,7 @@
 
 <script>
 import { mapActions } from "vuex";
-import TheShopLayout from "@/layouts/TheShopLayout.vue";
+import TheShopLayout from "@/layouts/TheShopLayout";
 export default {
   name: "ReadProductPage",
   components: {
@@ -82,6 +86,8 @@ export default {
     this.id = this.$route.params.id;
   }, */
   /*   beforeRouteUpdate(to) {
+    // console.log(to);
+    // console.log(from);
     this.id = to.params.id;
   }, */
   /*   methods: {
@@ -92,10 +98,11 @@ export default {
     },
   }, */
   methods: {
-    // ...mapActions(["addItemToCart"]),
+    // ...mapActions(["addItemToCart"])
     ...mapActions({ addProduct: "addItemToCart" }),
   },
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>

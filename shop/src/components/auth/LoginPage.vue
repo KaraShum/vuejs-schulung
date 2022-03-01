@@ -7,11 +7,8 @@
       <h2>Jetzt anmelden</h2>
       <p>
         oder
-        <a
-          class="text-vue2"
-          role="button"
-          @click="changeComponent('registerPage')"
-          >erstellen Sie ein Konto</a
+        <a class="text-vue2" role="button" @click="changeComponent('registerPage')"
+          >erstellen Sie ein Konto.</a
         >
       </p>
     </div>
@@ -91,7 +88,7 @@ export default {
       password: yup
         .string()
         .required("Ein Passwort wird benötigt.")
-        .min(6, "Das Passwort muss mindestens 6 Zeichen lang sein"),
+        .min(6, "Das Passwort muss mindestens sechs Zeichen lang sein."),
     });
     return {
       schema,
@@ -116,6 +113,7 @@ export default {
     submitData(values) {
       this.isLoading = true;
       this.error = "";
+      // console.log(values);
       this.$store
         .dispatch("signin", {
           email: values.email,
@@ -123,7 +121,8 @@ export default {
         })
         .then(() => {
           this.isLoading = false;
-          // Weiterleitung zum internen Shop
+          console.log("Login erfolgreich.");
+          // Weiterleitung zum internen Bereich
           // this.$router.push("/shop");
           this.$router.push({ path: "/shop" });
         })
@@ -139,4 +138,5 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>

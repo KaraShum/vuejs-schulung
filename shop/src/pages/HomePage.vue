@@ -15,8 +15,8 @@
         </div>
       </div>
     </template>
-    <template #rightCol
-      ><transition
+    <template #rightCol>
+      <transition
         enter-active-class="animate__animated animate__bounceInRight"
         leave-active-class="animate__animated animate__bounceOutRight"
         mode="out-in"
@@ -29,9 +29,11 @@
 </template>
 
 <script>
-import TheTwoColumnsLayout from "@layouts/TheTwoColumnsLayout.vue";
-import RegisterPage from "@components/auth/RegisterPage.vue";
-import LoginPage from "@components/auth/LoginPage.vue";
+// import TheTwoColumnsLayout from "../layouts/TheTwoColumnsLayout";
+import TheTwoColumnsLayout from "@/layouts/TheTwoColumnsLayout";
+import RegisterPage from "@/components/auth/RegisterPage";
+import LoginPage from "@/components/auth/LoginPage";
+
 export default {
   name: "HomePage",
   components: {
@@ -52,4 +54,5 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>

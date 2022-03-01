@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- Navbar -->
     <TheNavbar />
     <main>
       <div class="container">
@@ -12,8 +11,8 @@
               mode="out-in"
               appear
               :key="$route.path"
-              ><slot v-if="true"><h1>Hauptbereich</h1></slot>
-            </transition>
+              ><slot v-if="true"><h1>Hauptbereich</h1></slot></transition
+            >
           </div>
         </div>
       </div>
@@ -23,6 +22,7 @@
 
 <script>
 import TheNavbar from "@/components/TheNavbar";
+
 export default {
   name: "TheShopLayout",
   components: {
@@ -31,4 +31,5 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>
